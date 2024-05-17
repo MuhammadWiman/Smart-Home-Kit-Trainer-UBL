@@ -6,7 +6,7 @@ Servo myservo;
 #define SS_PIN  21  // ESP32 pin GPIO5 
 #define RST_PIN 22 // ESP32 pin GPIO27Servo myServo;
 int zervo = 13;
-byte keyTagUID[4] = {0x53, 0x27, 0x7C, 0x16};
+byte keyTagUID[4] = {0xB3, 0x2B, 0x5F, 0x16};
 
 //53 27 7C 16
 
@@ -50,8 +50,8 @@ void loop() {
         Serial.println();
       }
 
-//      rfid.PICC_HaltA(); // halt PICC
-//      rfid.PCD_StopCrypto1(); // stop encryption on PCD
+     rfid.PICC_HaltA(); // halt PICC
+     rfid.PCD_StopCrypto1(); // stop encryption on PCD
       }
     }
 }
